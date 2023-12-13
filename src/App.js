@@ -82,7 +82,7 @@ function App() {
             <ion-icon name="list-outline"></ion-icon>
           )}
           <select name="category" id="category" value={selectedCategory} onChange={handleCategoryChange}>
-            <option value="general">general</option>
+            <option value="general">gener</option>
             <option value="world">world</option>
             <option value="nation">nation</option>
             <option value="business">business</option>
