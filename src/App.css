@@ -153,11 +153,20 @@ h4 {
     }
 
     #search {
-        font-size: 20px;
-        padding: 8px 5px;
+        font-size: 17px;
+        padding: 3px 5px;
         width: 60%;
+        border-radius: 2.89px;
     }
 
+    #search-btn {
+        padding: 5px;
+    }
+
+    #search-btn ion-icon{
+        font-size: 20px;
+    }
+    
     #top-news {
         font-size: 30px;
         margin-left: 15px;
@@ -174,11 +183,12 @@ h4 {
     }
 
     ion-icon {
-        font-size: 30px;
+        font-size: 20px;
     }
 
     h4 {
         margin-right: 0px;
+        margin: -2.55px;
     }
 
     .select-language {
@@ -201,7 +211,7 @@ h4 {
     }
 
     .section {
-        width: 100%;
+        width: max-content;
         height: 350px;
     }
 
