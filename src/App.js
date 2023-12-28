@@ -136,7 +136,6 @@ function App() {
         }
       </header>
       <div className='news-show'>
-        <h1 id='top-news' >Top News</h1>
         <section className='news-articles'>
           {articles.length !== 0 ?
             articles.map((article, index) => (
