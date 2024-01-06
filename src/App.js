@@ -24,6 +24,34 @@ function App() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   
   // calling the api by useEffect
   useEffect(() => {
