@@ -23,7 +23,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-         const response = await fetch(`https://gnews.io/api/v4/top-headlines?category=${selectedCategory}&q=${category}&lang=${selectedLanguage}&apikey=6276ac9151c85c6fc5abc91d7fe6d424`);
+        const response = await fetch(`https://gnews.io/api/v4/top-headlines?category=${selectedCategory}&q=${category}&lang=${selectedLanguage}&apikey=6276ac9151c85c6fc5abc91d7fe6d424`);
         if (response.ok) {
           const data = await response.json();
           setArticles(data.articles);
