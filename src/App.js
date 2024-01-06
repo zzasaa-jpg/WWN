@@ -22,8 +22,9 @@ function App() {
   // calling the api by useEffect
   useEffect(() => {
     const fetchData = async () => {
+       const apiKey = process.env.REACT_APP_NEWS_KEY;
       try {
-        const response = await fetch(`https://gnews.io/api/v4/top-headlines?category=${selectedCategory}&q=${category}&lang=${selectedLanguage}&apikey=6276ac9151c85c6fc5abc91d7fe6d424`);
+        const response = await fetch(`https://gnews.io/api/v4/top-headlines?category=${selectedCategory}&q=${category}&lang=${selectedLanguage}&apikey=${apiKey}`);
         if (response.ok) {
           const data = await response.json();
           setArticles(data.articles);
