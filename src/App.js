@@ -19,6 +19,12 @@ function App() {
     setDarkMode(!darkMode);
   }
 
+
+
+
+
+
+  
   // calling the api by useEffect
   useEffect(() => {
     const fetchData = async () => {
