@@ -175,6 +175,8 @@ h4 {
 /* News is not rendering in api */
 #no-news {
     font-size: 25px;
+    text-align: center;
+    padding: 10px;
 }
 
 /* DarkMode Enable */
@@ -370,7 +372,7 @@ h4 {
     /* News is not rendering in api */
     #no-news {
         font-size: 20px;
-        text-align: justify;
+        text-align: center;
     }
 
     /* News Articles Container  */
