@@ -22,30 +22,20 @@ function App() {
   // calling the api by useEffect
   useEffect(() => {
     const fetchData = async () => {
-      const apiKey = process.env.REACT_APP_NEWS_KEY;
       try {
-        const response = await fetch(`https://gnews.io/api/v4/top-headlines?category=${selectedCategory}&q=${category}&lang=${selectedLanguage}&apikey=${apiKey}`);
+        const response = await fetch(`https://gnews.io/api/v4/top-headlines?category=${selectedCategory}&q=${category}&lang=${selectedLanguage}&apikey=6276ac9151c85c6fc5abc91d7fe6d424`);
         if (response.ok) {
           const data = await response.json();
           setArticles(data.articles);
           setLoading(false);
         } else {
+          console.error('Failed to fetch data');
           const errordata = await response.json()
-
-          if (response.status === 403) {
-            console.log('Request limit reached:', errordata.errors[0]);
-            setError('Request limit reached. Please try again later.');
-          } else {
-            console.error('Failed to fetch data:', errordata.errors[0]);
-            setError('Failed to fetch data. Please try again');
-          }
-          setLoading(false);
+          setError(errordata.errors[0]); //set the error message
         }
       } catch (errors) {
         // catch the erros
-        setLoading(false);
         console.error('Error fetching data:', errors);
-
       }
     };
 
@@ -185,9 +175,8 @@ function App() {
         {/* News rendring */}
         {
           // Add a condition for News articles and Loader Component
-          loading ? (<Loader />) : error ? (
-            <h1 id='no-news'>{error}</h1>
-          ) : (
+          loading ? (<Loader />) : (
+
             <div className='news-show'>
               <section className='news-articles'>
                 {/* map function use for render the newses */}
@@ -195,8 +184,7 @@ function App() {
                   articles.map((article, index) => (
                     <News key={index} article={article} />
                   )) :
-                  // <h1 id='no-news'>Failed news fetching...{error}</h1>
-                  <h1 id='no-news'>Failed news fetching...</h1>
+                  <h1 id='no-news'>Failed news fetching...{error}</h1>
                 }
               </section>
             </div>
