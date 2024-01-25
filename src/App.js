@@ -31,11 +31,13 @@ function App() {
         } else {
           console.error('Failed to fetch data');
           const errordata = await response.json()
-          setError(errordata.errors[0]); //set the error message
+          setError(errordata.error[0]); //set the error message
+          setLoading(false)
         }
-      } catch (errors) {
-        // catch the erros
-        console.error('Error fetching data:', errors);
+      } catch (error) {
+        // catch the error
+        console.error('Error fetching data:', error);
+        setLoading(false)
       }
     };
 
@@ -81,10 +83,16 @@ function App() {
 
   // event for handleSearchChange
   const handleSearchChange = (event) => {
-    if (event.target.value !== "") {
-      setCategory(event.target.value);
+    if (event.key === 'Enter') {
+      setCategory(event.target.value); 
     } else {
       setCategory("india");
+    }
+  }
+
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      setCategory(event.target.value);
     }
   }
 
@@ -159,6 +167,7 @@ function App() {
               onChange={handleSearchChange}
               placeholder='Search...'
               onBlur={closeSearch} // Close input when focus is lost
+              onKeyPress={handleKeyPress}
             />
           )}
 
