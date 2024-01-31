@@ -4,6 +4,7 @@ import './App.css';
 import logo from './logo.png';
 import dark_logo from './dark_logo.png';
 import Loader from './Loader';
+import { Link } from 'react-router-dom';
 
 function App() {
   // difine thr states
@@ -100,7 +101,7 @@ function App() {
     <div className='parent'>
       <div className={`parent ${darkMode ? "App dark" : "App"} ${articles.length === 0 ? "App-darkh" : ""}`}>
         {/* header */}
-        <header>
+        <header  >
           {/* website logo */}
           <div className='logo'>
             <img src={darkMode ? dark_logo : logo} alt="Logo" />
@@ -110,6 +111,9 @@ function App() {
           <button id='darkbtn' onClick={toggleDarkMode}>
             {darkMode ? <ion-icon name="sunny-outline"></ion-icon> : <ion-icon name="moon-outline"></ion-icon>}
           </button>
+
+          {/* link for faq */}
+          <h1 className='link-faq'><Link to='/faq'>Faq</Link></h1>
 
           {/* Select dropdown Category*/}
           <div className='select-category'>

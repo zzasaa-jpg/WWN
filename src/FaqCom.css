@@ -1,0 +1,128 @@
+.App2 {
+    background-color: rgb(178, 222, 255);
+    color: white;
+    height: 100vh;
+    display: flex;
+}
+
+.faq-h1 {
+    font-size: 45px;
+    padding: 10px;
+}
+
+.faq-container {
+    padding: 0px;
+    width: 900px;
+    margin: auto;
+}
+
+.faqitmes {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.faqitmes h2 {
+    background-color: #3f3333;
+    margin: 0;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    height: auto;
+    text-align: left;
+    font-size: 25px;
+    margin-bottom: 1px;
+}
+
+.faqitmes h2:hover {
+    background-color: #5b5050;
+}
+
+.faqitmes p {
+    transform: scaleY(0);
+    height: 0px;
+    margin: 0;
+    background-color: #3f3333;
+    color: white;
+    padding: 0px;
+    font-size: 18px;
+}
+
+.activeans {
+    transform: scaleY(1) !important;
+    padding: 10px !important;
+    margin: 0 !important;
+    height: auto !important;
+}
+
+span {
+    position: absolute;
+    right: 10px;
+    color: rgb(255, 255, 255);
+    top: 10px;
+    font-size: 30px;
+}
+
+/* Styles for phones (small screens) */
+@media only screen and (max-width: 767px) {
+    .App2 {
+        display: block;
+    }
+
+    .faq-h1 {
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    .faq-container {
+        padding: 10px;
+        width: auto;
+    }
+
+    span {
+        font-size: 20px;
+        top: 8px;
+    }
+
+    .faqitmes h2 {
+        font-size: 14px;
+    }
+
+    .faqitmes p {
+        font-size: 14px;
+    }
+}
+
+/* Styles for tablets (medium screens) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .App2 {
+        display: block;
+    }
+
+    .faq-h1 {
+        font-size: 35px;
+        padding: 10px;
+    }
+
+    .faq-container {
+        padding: 0px;
+        width: 800px;
+    }
+
+    span {
+        font-size: 30px;
+        top: 5px;
+    }
+
+    .faqitmes h2 {
+        font-size: 20px;
+    }
+
+    .faqitmes p {
+        font-size: 14px;
+    }
+}
+
+/* Styles for laptops and larger screens */
+@media only screen and (min-width: 1024px) {
+    /* Your styles for laptops and larger screens here */
+}
