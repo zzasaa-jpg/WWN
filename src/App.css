@@ -88,6 +88,20 @@ header {
     height: 50px;
 }
 
+/* faq link */
+.link-faq a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    margin: 0px 15px;
+}
+
+/* faq link DarkMode Enable */
+.dark .link-faq a{
+    color: white;
+}
+
 /* Search Button Styles */
 #search-btn {
     background-color: aqua;
@@ -316,6 +330,12 @@ h4 {
     /* Header styles */
     header {
         width: 100%;
+    }
+
+    /* faq link */
+    .link-faq a{
+        font-size: 17px;
+        margin: 0px;
     }
 
     /* Search Input styles */
