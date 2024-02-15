@@ -417,6 +417,7 @@ h4 {
         margin: 5px 0;
         padding: 0px 5px;
         font-size: 18px;
+        overflow-y: hidden;
     }
 
     /* Rendring the News articles Styles  */
