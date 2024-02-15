@@ -71,7 +71,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 5%;
+    padding: 12px 2%;
     box-shadow: 1px 1px 10px black;
     gap: 0px;
 }
@@ -234,6 +234,9 @@ h4 {
     margin: 5px 0;
     padding: 0px 5px;
     font-size: 20px;
+    overflow-y: scroll;
+    /* height: 100px; */
+    /* overflow: hidden; */
 }
 
 /* News description Styles */
